@@ -133,6 +133,19 @@ Returns the list of activities for children.
   }
 ]
 ```
+### POST /api/inscriptions
+Registers a child. Body (JSON):
+```json
+{
+  "parentName": "Jane Doe",
+  "email": "jane@example.com",
+  "phone": "+216 00 000 000",
+  "childName": "Sam",
+  "childAge": "3",
+  "message": "Optional message"
+}
+```
+`parentName`, `email`, `childName` and `childAge` are required. Returns `201` on success, or `400` with an error message.
 
 ## Git Workflow
 
@@ -147,6 +160,7 @@ Each development step was done in a dedicated branch, committed, then merged int
 | `feature/polish` | Logo integration and visual improvements |
 | `docs/readme` | Project documentation |
 | `feature/docker` | Dockerfiles and docker-compose for deployment |
+| `feature/register-form` | Registration form and POST API |
 
 ## Author
 

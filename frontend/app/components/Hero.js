@@ -22,7 +22,7 @@ export default function Hero() {
               {garderie ? garderie.slogan : "Loading..."}
             </h1>
             <p className="lead">{garderie ? garderie.description : ""}</p>
-            <a href="#contact" className="btn btn-warning btn-lg">
+            <a href="#contact" className="btn btn-baby btn-lg">
               Register your child
             </a>
           </div>

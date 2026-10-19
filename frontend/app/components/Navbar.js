@@ -14,7 +14,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-warning sticky-top">
+    <nav className="navbar navbar-expand-lg bg-baby sticky-top">
       <div className="container">
         <a className="navbar-brand fw-bold" href="#home">
           <img

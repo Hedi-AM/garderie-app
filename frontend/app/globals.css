@@ -29,3 +29,16 @@ section {
   border-color: #5fb3ee;
   color: #0b2a44;
 }
+.bg-baby-soft {
+  background-color: #eaf5fd;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* crops instead of stretching */
+  transition: transform 0.2s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.03);
+}

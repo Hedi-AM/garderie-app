@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import { API_URL } from "./config";
 import Register from "./components/Register";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   const [garderie, setGarderie] = useState(null);
@@ -27,6 +28,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Gallery />
       <Register />
 
       <footer id="contact" className="bg-dark text-white text-center py-4">

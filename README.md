@@ -119,6 +119,7 @@ Each development step was done in a dedicated branch, committed, then merged int
 | `feature/components` | Navbar, Hero and Services components |
 | `feature/backend` | Express backend and REST APIs |
 | `feature/api-integration` | Frontend connected to the APIs |
+| `feature/polish` | Logo integration and visual improvements |
 | `docs/readme` | Project documentation |
 
 ## Author

@@ -13,8 +13,10 @@ A responsive web application for a children's daycare ("garderie"). It features 
 ```
 garderie-app/
 ├── backend/
-│   ├── server.js          # Express server and API routes
+│   ├── server.js            # Express server and API routes
 │   ├── package.json
+│   ├── Dockerfile
+│   ├── .dockerignore
 │   └── .gitignore
 ├── frontend/
 │   ├── app/
@@ -22,10 +24,17 @@ garderie-app/
 │   │   │   ├── Navbar.js
 │   │   │   ├── Hero.js
 │   │   │   └── Services.js
-│   │   ├── config.js      # API address
-│   │   ├── layout.js      # Global layout, loads Bootstrap CSS
-│   │   └── page.js        # Main page
-│   └── package.json
+│   │   ├── config.js        # API base address
+│   │   ├── globals.css      # Custom styles
+│   │   ├── layout.js        # Global layout, loads Bootstrap CSS
+│   │   └── page.js          # Main page
+│   ├── public/
+│   │   └── daycare.png      # Logo
+│   ├── next.config.mjs      # Proxies /api requests to the backend
+│   ├── package.json
+│   ├── Dockerfile
+│   └── .dockerignore
+├── docker-compose.yml
 └── README.md
 ```
 
@@ -58,6 +67,22 @@ npm run dev
 
 ### 4. Open the app
 Go to http://localhost:3000. Both servers must be running at the same time.
+
+## Run with Docker
+
+Requires Docker with Compose.
+
+```bash
+docker compose up -d --build
+```
+
+The app is then available at http://localhost:3001 (or `http://VM_IP:3001` when deployed on a server). The backend is not exposed publicly: the frontend forwards `/api` requests to it over the internal Docker network.
+
+To stop and start the app without removing it:
+```bash
+docker compose stop
+docker compose start
+```
 
 ## API Documentation
 
@@ -121,6 +146,7 @@ Each development step was done in a dedicated branch, committed, then merged int
 | `feature/api-integration` | Frontend connected to the APIs |
 | `feature/polish` | Logo integration and visual improvements |
 | `docs/readme` | Project documentation |
+| `feature/docker` | Dockerfiles and docker-compose for deployment |
 
 ## Author
 

@@ -28,10 +28,11 @@ export default function Hero() {
           </div>
           <div className="col-md-6">
             <img
-              src="https://placehold.co/600x400?text=Happy+Kids"
-              alt="Children playing"
-              className="img-fluid rounded shadow"
-            />
+  src="/daycare.png"
+  alt="Les Petits Anges logo"
+  className="img-fluid d-block mx-auto"
+  style={{ maxHeight: "400px" }}
+/>
           </div>
         </div>
       </div>

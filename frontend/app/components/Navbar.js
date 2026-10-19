@@ -17,7 +17,12 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-warning sticky-top">
       <div className="container">
         <a className="navbar-brand fw-bold" href="#home">
-          <span className="fs-3 me-2">🧸</span>
+          <img
+  src="/daycare.png"
+  alt="Logo"
+  height="100"
+  className="me-2"
+/>
           {garderie ? garderie.name : "Loading..."}
         </a>
         <button

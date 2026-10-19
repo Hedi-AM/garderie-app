@@ -60,6 +60,34 @@ app.get("/api/activites", (req, res) => {
   res.json(activites);
 });
 
+// ---------- REGISTRATIONS ----------
+const inscriptions = [];
+
+app.post("/api/inscriptions", (req, res) => {
+  const { parentName, email, phone, childName, childAge, message } = req.body;
+
+  // Basic validation: these fields are required
+  if (!parentName || !email || !childName || !childAge) {
+    return res.status(400).json({ error: "Please fill in all required fields." });
+  }
+
+  const inscription = {
+    id: inscriptions.length + 1,
+    parentName,
+    email,
+    phone: phone || "",
+    childName,
+    childAge,
+    message: message || "",
+    date: new Date().toISOString(),
+  };
+
+  inscriptions.push(inscription);
+  console.log("New registration:", inscription);
+
+  res.status(201).json({ message: "Registration received!", id: inscription.id });
+});
+
 // ---------- START ----------
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
